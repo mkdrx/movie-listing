@@ -1,12 +1,15 @@
-import React from "react";
-import initialMovies from "../constants/initialMovies";
+import React, { useContext } from "react";
+import MovieContext from "../contexts/MovieContext";
 import Movie from "./Movie";
 
 const MovieList = () => {
+  // Consumes MovieContext provider
+  const { movies } = useContext(MovieContext);
+
   return (
     <div className="container">
       <div className="row">
-        {initialMovies.map((movie) => (
+        {movies.map((movie) => (
           <div className="col-md-4" key={movie.id}>
             <Movie movie={movie} />
           </div>

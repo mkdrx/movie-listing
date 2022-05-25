@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
+import UserContext from "../contexts/UserContext";
 
 const Movie = ({ movie }) => {
+  // Consumes UserContext provider
+  const { user, toggleFavorite } = useContext(UserContext);
+
   const imgStyles = {
     height: "260px",
     objectFit: "cover",
   };
 
-  const isFavorite = false;
+  const isFavorite = user?.favoriteMovies?.includes(movie.id);
 
   return (
     <div className="card">
@@ -22,11 +26,11 @@ const Movie = ({ movie }) => {
           className={`btn ${
             isFavorite ? "btn-success" : "btn-outline-primary"
           }`}
+          onClick={() => toggleFavorite(movie.id)}
         >
           Favorite
         </button>
       </div>
-      <h1>Movie</h1>
     </div>
   );
 };

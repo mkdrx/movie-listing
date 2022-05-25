@@ -1,3 +1,5 @@
+// Array that contains films
+
 const initialMovies = [
   {
     id: 1,
