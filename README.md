@@ -1,4 +1,6 @@
 # Basic Movie list & Favorite selection - useContext practice
+![mv](https://user-images.githubusercontent.com/99738621/188518459-5cb47938-3e65-4613-885c-f4bc002cc3c5.png)
+
 
 ## Based on [Luis Cabrera](https://github.com/luismcabrera) - useContext explanation
 
